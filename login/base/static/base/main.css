@@ -1,0 +1,27 @@
+*{
+    background-color:rgb(247, 233, 235);
+}
+a{
+    text-decoration: none;
+    font-size: 25px;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    border: none;
+}
+.home .details{
+    display: flex;
+    gap:30px;
+}
+.container h1,p{
+    text-align: center;
+    margin-top: 40px;
+}
+.button{
+  border-radius: 20px;
+}
+.btn{
+    border: none;
+}

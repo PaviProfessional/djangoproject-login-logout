@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'base/main.css' %}">
+</head>
+<body>
+    {% load static %}
+    <nav class="navbar">
+        <div class="container">
+        <div class='home'>
+            <div class="navbar-nav">
+                <a href="{% url 'home' %}" style="color:white; background-color:black; border-radius:20px;">Home</a>
+            </div>  
+            <form class="details">
+                
+                <a href="{% url 'register' %}" type="sumbit" style="color:white; background-color:black; border-radius:20px;">Create Account</a>
+                <a href="{% url 'login' %}" type="sumbit" style="color:white; background-color:black; border-radius:20px;">Log In</a>
+                
+            </form>
+        </div>
+    </div> 
+</div>   
+    </nav>  
+    <div class='container'>
+        {% if messages%}
+        {% for message in messages %}
+        <div alert={{message.tags}}>{{message}}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>

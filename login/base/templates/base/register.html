@@ -1,0 +1,22 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content%}
+<link rel="stylesheet" href="{% static 'base/main.css' %}">
+
+<div class='container'>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <fieldset class="from-group">
+            <legend style="color: #000;">Join Now</legend>
+            {{ form }}
+        </fieldset>
+        <div>
+            <button class='button'>Sign Up</button>
+        </div>
+        <div>
+            <button class='btn'>Aleady have an account?<a href="{%  url 'login' %}">Sign In</button>
+        </div>
+   
+    </form>   
+</div>
+{% endblock content %}
